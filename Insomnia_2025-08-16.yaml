@@ -1,0 +1,135 @@
+type: collection.insomnia.rest/5.0
+name: ecommerce-clientes
+meta:
+  id: wrk_61ca358cdce242c687b1637adaa153e2
+  created: 1755365142347
+  modified: 1755365927480
+  description: ""
+collection:
+  - url: localhost:8080/clientes
+    name: criar cliente
+    meta:
+      id: req_1c7d5eac048c49dc9dc474212b107814
+      created: 1755365142373
+      modified: 1755365248415
+      isPrivate: false
+      description: ""
+      sortKey: -1755365142373
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"nome": "Teste",
+        	"email": "teste@test.com"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.4.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:8080/clientes
+    name: buscarTodos
+    meta:
+      id: req_9fba8f7bd76b4eba83a07e441234a84f
+      created: 1755365258390
+      modified: 1755365442072
+      isPrivate: false
+      description: ""
+      sortKey: -1755365258390
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.4.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:8080/clientes/1
+    name: buscarPorId
+    meta:
+      id: req_1fea85d3da684dbea21cd103d082a9d7
+      created: 1755365392107
+      modified: 1755365434926
+      isPrivate: false
+      description: ""
+      sortKey: -1755365392107
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.4.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:8080/clientes/total
+    name: contarClientes
+    meta:
+      id: req_d92a4ea389a04b35b6267036184e277f
+      created: 1755365443461
+      modified: 1755365760164
+      isPrivate: false
+      description: ""
+      sortKey: -1755365443461
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.4.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:8080/clientes/nome/Teste
+    name: buscarPorNome
+    meta:
+      id: req_762d5ec0cd55403bbb51f710a613869f
+      created: 1755365826708
+      modified: 1755365874109
+      isPrivate: false
+      description: ""
+      sortKey: -1755365826708
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.4.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_01100f0bf495f499cc9d0f11f4fdba0c2ddf1c96
+    created: 1755365142350
+    modified: 1755365142350
+environments:
+  name: Base Environment
+  meta:
+    id: env_01100f0bf495f499cc9d0f11f4fdba0c2ddf1c96
+    created: 1755365142349
+    modified: 1755365142349
+    isPrivate: false
