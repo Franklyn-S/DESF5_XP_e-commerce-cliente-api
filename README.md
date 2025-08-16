@@ -56,3 +56,35 @@ Para rodar os testes automatizados:
 ---
 
 Em caso de dúvidas, consulte o arquivo `compose.yaml` ou o código fonte.
+
+
+## Estrutura de pastas
+
+
+└── src/java
+    └── com/exemplo/api
+        ├── controller   # Camada de "Controller". 
+        │                # Responsável por receber e tratar as requisições HTTP, 
+        │                # chamar os serviços adequados e retornar as respostas 
+        │                # (ex: JSON para APIs REST).
+        │
+        ├── model        # Camada de "Model". 
+        │                # Contém as entidades de domínio (ex: Cliente, Pedido), 
+        │                # representando os dados e regras de persistência. 
+        │                # É onde ficam as classes mapeadas para o banco.
+        │
+        ├── repository   # Camada de acesso a dados. 
+        │                # Fornece a comunicação direta com o banco de dados, 
+        │                # geralmente via JPA/Hibernate, usando interfaces como 
+        │                # JpaRepository para operações CRUD.
+        │
+        ├── service      # Camada de "Service". 
+        │                # Implementa a lógica de negócios da aplicação. 
+        │                # Centraliza as regras que podem ser usadas por 
+        │                # diferentes controladores, garantindo separação de 
+        │                # responsabilidades.
+        │
+        └── ApiApplication # Classe principal (ponto de entrada). 
+                         # Responsável por inicializar e configurar a aplicação, 
+                         # geralmente anotada com @SpringBootApplication.
+
